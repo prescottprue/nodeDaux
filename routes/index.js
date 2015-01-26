@@ -12,9 +12,9 @@ router.post('/run', function(req, res, next){
   });
 });
 router.post('/docs', function(req, res, next){
-  // Generate docs
   if(req.body.hasOwnProperty('name')){
-    runGruntTask('shell', function(){
+    shell.exec('php generate.php global.json static', function(){
+      console.log('Docs generated for ', req.body.name);
       res.end();
     });
   }

@@ -1,8 +1,9 @@
 # Node Daux
 
-Node server that hosts a set of documents with [Daux.io](http://daux.io).
+Node server that generates documentation from Markdown.  Currently using [Daux.io](http://daux.io).
 
 This project was created to allow docs/styling to be updated separately from server logic. A Daux docs server will allow the user update docs content by uploading markdown files or pointing to an s3 bucket that has the files.
+
 
 ## Getting Started
 
@@ -30,6 +31,8 @@ This project was created to allow docs/styling to be updated separately from ser
 
 ### Planning
 
+Accept Markdown from Github Link and S3 Bucket
+
 **PHP** - Have php run directly in node instead of using grunt-php
 - [mdoc](https://github.com/millermedeiros/mdoc) May be the best solution. Structure will change, but it is written in node
 
@@ -41,5 +44,5 @@ This project was created to allow docs/styling to be updated separately from ser
 ## Dependencies
 
 * [grunt-php](https://github.com/sindresorhus/grunt-php)
-
+* [grunt-shell](https://github.com/sindresorhus/grunt-shell)
 * [shelljs](https://github.com/arturadib/shelljs)
