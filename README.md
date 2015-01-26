@@ -21,6 +21,7 @@ This project was created to allow docs/styling to be updated separately from ser
 
 #### Current
 * `/run` - Starts Daux service by running `grunt` with exec
+* `/docs` - Generates static docs
 
 #### Planned
 * `/source` - Load markdown content from specified S3 bucket
@@ -30,8 +31,10 @@ This project was created to allow docs/styling to be updated separately from ser
 ### Planning
 
 **PHP** - Have php run directly in node instead of using grunt-php
+- [mdoc](https://github.com/millermedeiros/mdoc) May be the best solution. Structure will change, but it is written in node
 
 **Grunt** - Remove Grunt as a main dependency (should only be dev)
+- Shell command would only work with grunt?
 
 **Admin Panel** - Edit/Add content, setup S3 bucket upload, backups
 

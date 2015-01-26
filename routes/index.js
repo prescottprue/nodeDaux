@@ -11,9 +11,18 @@ router.post('/run', function(req, res, next){
     res.end();
   });
 });
+router.post('/docs', function(req, res, next){
+  // Generate docs
+  if(req.body.hasOwnProperty('name')){
+    runGruntTask('shell', function(){
+      res.end();
+    });
+  }
+
+});
 function runGruntTask(task, cb) {
-  var taskCommand = "grunt" + task;
-  shell.exec(task, function(){
+  var taskCommand = "grunt " + task;
+  shell.exec(taskCommand, function(){
     console.log(task + ' was run successfully.');
     if(cb){
       cb();

@@ -1,10 +1,7 @@
 module.exports = function (grunt) {
     'use strict';
 
-    grunt.loadNpmTasks('grunt-php');
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-
+    require('load-grunt-tasks')(grunt);
     grunt.initConfig({
         php: {
             dist: {
@@ -38,6 +35,11 @@ module.exports = function (grunt) {
                 },
             },
         },
+        shell: {
+            target: {
+              command: 'php generate.php global.json static'
+            }
+        }
     });
 
     //grunt.registerTask('default', ['less', 'watch']);
